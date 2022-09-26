@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "editorconfig.editorconfig",
+    "mikestead.dotenv",
+    "yzhang.markdown-all-in-one",
+    "dzannotti.vscode-babel-coloring",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

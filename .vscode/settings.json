@@ -1,0 +1,9 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  // see -> https://github.com/microsoft/TypeScript/issues/43838
+  // "typescript.tsserver.log": "verbose",
+  "files.exclude": {
+    "node_modules/": true
+  }
+}
