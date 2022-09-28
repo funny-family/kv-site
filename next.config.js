@@ -1,6 +1,9 @@
-const { createPageExtensionsWithPrefix } = require("./utils/create-page-extensions-with-prefix");
+const { createPageExtensionsWithPrefix } = require('./utils/create-page-extensions-with-prefix');
 
-const pageExtensions = createPageExtensionsWithPrefix("page", ["tsx", "ts", "jsx", "js"]);
+const pageExtensions = createPageExtensionsWithPrefix(
+  'page',
+  ['tsx', 'ts', 'jsx', 'js'],
+);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,8 +11,8 @@ const nextConfig = {
   swcMinify: true,
   pageExtensions,
   images: {
-    loader: "akamai",
-    path: "",
+    loader: 'akamai',
+    path: '',
   },
 
   /* для деплоя ко мне на github pages */
@@ -17,8 +20,8 @@ const nextConfig = {
   // assetPrefix: '/kv-site',
 
   /* для локальной разработки */
-  basePath: "",
-  assetPrefix: "",
+  basePath: '',
+  assetPrefix: '',
 };
 
 module.exports = nextConfig;
