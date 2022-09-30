@@ -32,6 +32,7 @@
   "eslint.format.enable": true,
   "eslint.enable": true,
   "eslint.alwaysShowStatus": true,
+  "eslint.nodePath": "./node_modules",
   "eslint.options": {
     "extensions": [
       ".html",
@@ -54,6 +55,7 @@
     "node_modules/": true
   },
   "cSpell.words": [
-    "hygen"
+    "hygen",
+    "nextjs"
   ]
 }
