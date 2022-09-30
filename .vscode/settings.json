@@ -55,7 +55,8 @@
     "node_modules/": true
   },
   "cSpell.words": [
+    "codegen",
     "hygen",
     "nextjs"
-  ]
+  ],
 }
