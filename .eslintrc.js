@@ -55,6 +55,7 @@ const typescriptEslintRule = {
     { prefer: 'type-imports' },
   ],
   '@typescript-eslint/consistent-type-exports': 'error',
+  '@typescript-eslint/triple-slash-reference': 'warn',
 };
 
 const env = {
