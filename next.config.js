@@ -16,7 +16,7 @@ const nextConfig = {
   },
 
   /* для деплоя ко мне на github pages */
-  // basePath: '/kv-site',s
+  // basePath: '/kv-site',
   // assetPrefix: '/kv-site',
 
   /* для локальной разработки */
