@@ -1,7 +1,16 @@
+// https://github.com/typescript-eslint/typescript-eslint/issues/109
+
 /**
  * @typedef { import("eslint").Linter.Config } EsLintConfig
+ * @typedef { import("eslint").Linter.RulesRecord } RulesRecord
+ * @typedef { import("eslint").Linter.ConfigOverride } ConfigOverride
  */
 
+//  https://duncanleung.com/eslint-mixed-javascript-typescript-files-codebase/
+// https://stackoverflow.com/questions/57597142/how-to-run-typescript-eslint-on-ts-files-and-eslint-on-js-files-in-the-same-pr
+// https://github.com/typescript-eslint/typescript-eslint/issues/109
+
+/** @type {RulesRecord} */
 const eslintRule = {
   semi: ['error', 'always'],
   'comma-dangle': ['error', 'always-multiline'],
@@ -25,6 +34,7 @@ const eslintRule = {
 /**
  * @see https://typescript-eslint.io/
  */
+/** @type {RulesRecord} */
 const typescriptEslintRule = {
   '@typescript-eslint/no-var-requires': 'warn',
   '@typescript-eslint/explicit-function-return-type': 'warn',
@@ -47,37 +57,86 @@ const typescriptEslintRule = {
   '@typescript-eslint/consistent-type-exports': 'error',
 };
 
-/** @type {EsLintConfig} */
-module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
+const env = {
+  browser: true,
+  es2021: true,
+  node: true,
+  es6: true,
+};
+
+const ecmaFeatures = {
+  jsx: true,
+};
+
+const ecmaVersion = 'latest';
+
+const sourceType = 'module';
+
+const extendsOptionsForJs = [
+  'eslint:recommended',
+  'plugin:react/recommended',
+];
+
+const nextjsExtendsOptions = [
+  'next',
+  'next/core-web-vitals',
+];
+
+const jsPlugins = ['react'];
+
+/** @type {ConfigOverride} */
+const typescriptOverrides = {
+  env,
+  globals: {
+    react: 'writable',
   },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
+    ...extendsOptionsForJs,
     'plugin:@typescript-eslint/recommended',
     /**
      * @see https://github.com/standard/eslint-config-standard-with-typescript/blob/master/src/index.ts
      */
     'standard-with-typescript',
-    'next',
-    'next/core-web-vitals',
+    ...nextjsExtendsOptions,
   ],
-  overrides: [],
+  plugins: [...jsPlugins, '@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
+    ecmaVersion,
+    sourceType,
+    ecmaFeatures,
     project: ['./tsconfig.json'],
-    ecmaVersion: 12,
-    sourceType: 'module',
+    tsconfigRootDir: __dirname,
   },
-  plugins: ['@typescript-eslint', 'react'],
+  files: ['**/*.{ts,tsx}'],
   rules: {
     ...eslintRule,
     ...typescriptEslintRule,
   },
+};
+
+/** @type {EsLintConfig} */
+module.exports = {
+  root: true,
+  env,
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  extends: [
+    ...extendsOptionsForJs,
+    ...nextjsExtendsOptions,
+  ],
+  plugins: [...jsPlugins],
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    ecmaVersion,
+    sourceType,
+    ecmaFeatures,
+  },
+  rules: {
+    ...eslintRule,
+  },
+  overrides: [typescriptOverrides],
 };
