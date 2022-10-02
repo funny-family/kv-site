@@ -24,3 +24,21 @@ a {
     background: black;
   }
 }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#__next {
+  height: 100%;
+}
+
+html,
+body,
+#__next {
+  width: 100%;
+}
