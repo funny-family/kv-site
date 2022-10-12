@@ -10,6 +10,7 @@
     "next:start": "next start",
     "next:lint": "next lint",
     "next:export": "next export",
+    "commit": "git cz",
     "codegen:component": "hygen new component",
     "codegen:page": "hygen new page"
   },
@@ -42,6 +43,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.31.8",
     "hygen": "^6.2.11",
+    "nextjs-routes": "^0.1.3",
     "open": "^8.4.0",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",

@@ -1,3 +1,4 @@
+const withRoutes = require('nextjs-routes/config')();
 const { createPageExtensionsWithPrefix } = require('./utils/create-page-extensions-with-prefix');
 
 const pageExtensions = createPageExtensionsWithPrefix(
@@ -24,4 +25,4 @@ const nextConfig = {
   assetPrefix: '',
 };
 
-module.exports = nextConfig;
+module.exports = withRoutes(nextConfig);

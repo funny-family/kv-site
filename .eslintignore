@@ -10,3 +10,4 @@ dist
 *.lock
 .vscode*
 .next*
+nextjs-routes.d.ts
