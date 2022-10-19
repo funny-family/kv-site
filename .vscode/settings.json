@@ -8,11 +8,11 @@
   "editor.formatOnSave": true,
   // "editor.formatOnPaste": true,
   // "editor.formatOnType": true,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "[javascript][javascriptreact][typescript][typescriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "[css][css][scss][sass][less]": {
+  "[css][scss][sass][less]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "[json][jsonc]": {
@@ -49,6 +49,10 @@
     "javascriptreact",
     "typescriptreact"
   ],
+  "stylelint.enable": true,
+  "css.validate": true,
+  "less.validate": true,
+  "scss.validate": true,
   // -------------- LINTER -----------------------
   "files.autoSave": "afterDelay",
   "files.exclude": {
@@ -58,6 +62,7 @@
     "codegen",
     "commitlint",
     "hygen",
-    "nextjs"
+    "nextjs",
+    "stylelint"
   ],
 }

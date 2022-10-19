@@ -1,4 +1,5 @@
 const withRoutes = require('nextjs-routes/config')();
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const { createPageExtensionsWithPrefix } = require('./utils/create-page-extensions-with-prefix');
 
 const pageExtensions = createPageExtensionsWithPrefix(
@@ -23,6 +24,12 @@ const nextConfig = {
   /* для локальной разработки */
   basePath: '',
   assetPrefix: '',
+
+  webpack: (config) => {
+    config.plugins.push(new StylelintPlugin());
+
+    return config;
+  },
 };
 
 module.exports = withRoutes(nextConfig);
