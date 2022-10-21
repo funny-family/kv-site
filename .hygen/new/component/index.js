@@ -1,13 +1,13 @@
-const { capitalize } = require("../../../utils/capitalize");
-const { fromCableToCamelCase } = require("../../../utils/from-cable-to-camel-case");
+const { capitalize } = require('../../../utils/capitalize');
+const { fromCableToCamelCase } = require('../../../utils/from-cable-to-camel-case');
 
 module.exports = {
   prompt: ({ inquirer }) => {
     const questions = [
       {
-        type: "input",
-        name: "name",
-        message: "What is the component name?",
+        type: 'input',
+        name: 'name',
+        message: 'What is the component name?',
       },
     ];
 
@@ -17,7 +17,7 @@ module.exports = {
 
       const kebabCaseRegex = /^([a-z][a-z0-9]*)(-[a-z0-9]+)*$/g;
       if (!kebabCaseRegex.test(componentName)) {
-        console.error("\x1b[31m", `Component name "${componentName}" must be in kebab-case!`);
+        console.error('\x1b[31m', `Component name '${componentName}' must be in kebab-case!`);
         process.exit(1);
       }
 
