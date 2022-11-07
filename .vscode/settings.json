@@ -52,6 +52,7 @@
   "scss.validate": false,
   "css.validate": false,
   "less.validate": false,
+  // "stylelint.enable": true,
   "stylelint.validate": ["css", "scss"],
   // -------------- LINTER -----------------------
   "files.autoSave": "afterDelay",
