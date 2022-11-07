@@ -1,3 +1,5 @@
+'use strict';
+
 const { capitalize } = require('../../../utils/capitalize');
 const { fromCableToCamelCase } = require('../../../utils/from-cable-to-camel-case');
 
