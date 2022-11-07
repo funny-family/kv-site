@@ -14,9 +14,12 @@
     "codegen:component": "hygen new component",
     "codegen:page": "hygen new page",
     "husky:prepare": "husky install",
-    "lint:check": "eslint . --ext .js,.ts,.jsx,.tsx"
+    "eslint:check": "eslint . --ext .js,.ts,.jsx,.tsx",
+    "stylelint:check": "stylelint '**/*{.css,.scss}'",
+    "stylelint:fix": "stylelint '**/*{.css,.scss}' --fix"
   },
   "dependencies": {
+    "clsx": "^1.2.1",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -51,17 +54,17 @@
     "lint-staged": "^13.0.3",
     "nextjs-routes": "^0.1.3",
     "open": "^8.4.0",
+    "postcss": "8",
+    "postcss-scss": "^4.0.5",
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
-    "stylelint": "^14.13.0",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-recommended-scss": "^7.0.0",
-    "stylelint-config-standard": "^28.0.0",
-    "stylelint-config-standard-scss": "^5.0.0",
-    "stylelint-prettier": "^2.0.0",
+    "stylelint": "^14.14.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard-scss": "^6.0.0",
+    "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.3.0",
     "stylelint-webpack-plugin": "^3.3.0",
-    "typescript": "*",
+    "typescript": "^4.8.4",
     "typescript-plugin-css-modules": "^3.4.0"
   }
 }
