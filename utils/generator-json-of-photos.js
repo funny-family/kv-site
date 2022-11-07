@@ -37,8 +37,8 @@ const getImageAttributes = (querySelector = googleDiskImageQuerySelector) => {
  * @description .....
  *
  * @param {{
- *  blobParts: BlobPart[],
- *  blobOptions: BlobPropertyBag
+ *   blobParts: BlobPart[]
+ *   blobOptions: BlobPropertyBag
  * }} querySelector
  *
  * @return {String}

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * @param {string} prefix
  * @param {string[]} extensions

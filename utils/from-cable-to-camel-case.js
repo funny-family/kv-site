@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * @param {string} string
  * @returns {string|null}
