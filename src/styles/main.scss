@@ -1,3 +1,9 @@
+@use "./mixins/fonts.mixin.scss" as f;
+
+:root {
+@include f.fonts;
+}
+
 html,
 body {
   padding: 0;
