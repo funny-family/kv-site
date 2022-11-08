@@ -1,4 +1,4 @@
-import '@/styles/main.scss';
+import '@/shared/styles/main.scss';
 import type { FC } from 'react';
 import type { AppProps } from 'next/app';
 
