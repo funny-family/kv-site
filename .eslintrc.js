@@ -1,3 +1,5 @@
+'use strict';
+
 // https://github.com/typescript-eslint/typescript-eslint/issues/109
 
 /**
@@ -56,6 +58,7 @@ const typescriptEslintRule = {
   ],
   '@typescript-eslint/consistent-type-exports': 'error',
   '@typescript-eslint/triple-slash-reference': 'warn',
+  '@typescript-eslint/no-empty-interface': 'warn',
 };
 
 const env = {
