@@ -1,3 +1,11 @@
-.root {
+.page {
+  position: relative;
+  z-index: 1;
   color: blue;
+}
+
+.page__background.page__background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
